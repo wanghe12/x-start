@@ -39,8 +39,8 @@ def sendMail(file_path):
     mail_addr = item_list[3][1] #baoyong@sdgakj.com
     head = item_list[4][1]  #疲劳驾驶测试报告
     smtp_server = 'smtp.qq.com'
-    from_mail = '359430225@qq.com'
-    mail_pass = 'malemxccmihhcage'
+    from_mail = '457950238@qq.com'
+    mail_pass = 'pfapznjqpozacagh'
     to_mail = item_list[3][1] #wh18620385321@163.com,得到的是字符创
     print(to_mail)
     # 构造一个MIMEMultipart对象代表邮件本身
@@ -70,7 +70,7 @@ def sendMail(file_path):
         s.connect(smtp_server, "25")
         s.login(from_mail, mail_pass)
         s.sendmail(from_mail, msg['To'].split(";"), msg.as_string())  # as_string()把MIMEText对象变成str
-        print('%s----发送邮件成功------' % time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+        print('%s----发送邮件成功------' %time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
         s.quit()
     except Exception as err:
         print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
